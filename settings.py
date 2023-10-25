@@ -121,3 +121,22 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# Firebase Setup
+
+import os
+
+FIRESTORE_KEY_PATH = os.environ.get('FIRESTORE_KEY_PATH')
+
+import firebase_admin
+from firebase_admin import credentials
+
+
+cred = ''
+
+if FIRESTORE_KEY_PATH:
+    cred = credentials.Certificate(FIRESTORE_KEY_PATH)
+    firebase_admin.initialize_app(cred)
+else:
+    print("Warning: FIRESTORE_KEY_PATH environment variable not set. Firebase not initialized!")
