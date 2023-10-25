@@ -1,0 +1,28 @@
+# Python files
+*.pyc
+*.pyo
+*.egg-info
+__pycache__/
+
+# Virtual environment
+venv/
+
+# Database
+db.sqlite3
+
+# Django specific
+*.log
+*.pot
+*.jpg
+MEDIA/
+media/
+staticfiles/
+
+# IDE specific (e.g., for PyCharm)
+.idea/
+*.iml
+
+# Other files
+*.swp
+*.swo
+.DS_Store
