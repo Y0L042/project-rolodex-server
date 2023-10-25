@@ -26,3 +26,6 @@ staticfiles/
 *.swp
 *.swo
 .DS_Store
+
+# Confidential
+confidential/
